@@ -1,0 +1,14 @@
+server:
+  port: 9001 #端口号
+spring:
+  application:
+    name: obo-base #此处写下划线和减号都可以，但是到了spring cloud时，有个地方不支持下划线
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.25.142:3306/obo_base?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+  jpa:
+    generate-ddl: false #是否自动生成DDL语句
+    database: mysql
+    show-sql: true
