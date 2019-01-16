@@ -2,12 +2,15 @@ package com.obo.base.controller;
 
 import com.obo.base.pojo.Label;
 import com.obo.base.service.LabelService;
+import entity.PageResult;
 import entity.Result;
 import entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/label")
@@ -47,5 +50,33 @@ public class LabelController {
     public Result delete(@PathVariable("id") String id){
         labelService.deleteById(id);
         return new Result(true, StatusCode.OK,"删除成功");
+    }
+
+    /**
+     * @Author Double
+     * @Description //TODO 根据条件查询
+     * @Date 17:07 2019/01/16
+     * @param
+     * @return
+    **/
+    @RequestMapping(value = "/search", method = RequestMethod.POST)
+    public Result findSearch(@RequestBody Map searchMap){
+        return new Result(true,StatusCode.OK,"查询成功",labelService.findSearch(searchMap));
+    }
+
+    /**
+     * @Author Double
+     * @Description //TODO 根据分页，条件查询
+     * @Date 17:15 2019/01/16
+     * @param
+     * @return
+    **/
+    @RequestMapping(value = "/search/{pageNum}/{pageSize}", method = RequestMethod.POST)
+    public Result findSearch(@RequestBody Map searchMap,
+                             @PathVariable("pageNum") int pageNum,
+                             @PathVariable("pageSize") int pageSize){
+        Page<Label> pageList = labelService.findSearch(searchMap, pageNum, pageSize);
+        return new Result(true,StatusCode.OK,"查询成功",
+                new PageResult<>(pageList.getTotalElements(),pageList.getContent()));
     }
 }

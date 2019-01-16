@@ -5,7 +5,7 @@ spring:
     name: obo-base #此处写下划线和减号都可以，但是到了spring cloud时，有个地方不支持下划线
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.25.142:3306/obo_base?useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://39.96.34.145:3306/obo_base?useUnicode=true&characterEncoding=UTF-8
     username: root
     password: 123456
   jpa:
