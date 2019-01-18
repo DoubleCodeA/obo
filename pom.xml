@@ -10,6 +10,10 @@
     <modules>
         <module>obo_common</module>
         <module>obo_base</module>
+        <module>obo_article</module>
+        <module>obo_gathering</module>
+        <module>obo_recruit</module>
+        <module>obo_qa</module>
     </modules>
 
     <packaging>pom</packaging>

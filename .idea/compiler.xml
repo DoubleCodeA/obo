@@ -6,10 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="obo_article" />
         <module name="obo_base" />
         <module name="obo_common" />
+        <module name="obo_gathering" />
+        <module name="obo_qa" />
+        <module name="obo_recruit" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="demo_springdatajpa" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
