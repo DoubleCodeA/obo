@@ -12,6 +12,7 @@
         <module name="obo_gathering" />
         <module name="obo_qa" />
         <module name="obo_recruit" />
+        <module name="obo_spit" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">

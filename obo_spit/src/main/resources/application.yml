@@ -1,0 +1,11 @@
+server:
+  port: 9006
+spring:
+  application:
+    name: obo_spit
+  data:
+    mongodb:
+      host: 39.96.34.145
+      database: spitdb
+  redis:
+    host: 39.96.34.145

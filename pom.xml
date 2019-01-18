@@ -14,6 +14,7 @@
         <module>obo_gathering</module>
         <module>obo_recruit</module>
         <module>obo_qa</module>
+        <module>obo_spit</module>
     </modules>
 
     <packaging>pom</packaging>

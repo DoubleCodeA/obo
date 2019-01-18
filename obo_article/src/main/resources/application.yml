@@ -14,3 +14,7 @@ spring:
     generate-ddl: true
   redis:
     host: 39.96.34.145
+  data:
+    mongodb:
+      host: 39.96.35.145
+      database: comment
